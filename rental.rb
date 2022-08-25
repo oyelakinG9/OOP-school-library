@@ -11,7 +11,7 @@ class Rental
     @book = book
     book.rentals << self
   end
-  
+ 
 end
 
 friend = Person.new(12, 'Carlos')
