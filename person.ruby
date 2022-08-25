@@ -1,4 +1,4 @@
-require '/decorate.rb'
+require '/decorate'
 
 # parent class Person.new(age, name, parent_permision)
 class Person < Nameable
@@ -36,8 +36,8 @@ person1 = Person.new(10, 'maria', parent_permission: false)
 p person1.can_use_services?
 
 person = Person.new(22, 'maximilianus')
-  person.correct_name
-  capitalizedPerson = CapitalizeDecorator.new(person)
-  capitalizedPerson.correct_name
-  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-  capitalizedTrimmedPerson.correct_name
+person.correct_name
+capitalizedPerson = CapitalizeDecorator.new(person)
+capitalizedPerson.correct_name
+capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
+capitalizedTrimmedPerson.correct_name
