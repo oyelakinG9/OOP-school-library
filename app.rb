@@ -30,7 +30,7 @@ def list_of_people
   prints 'Name: '
   name = gets.chomp
 
-  prints 'Has parent permission [Y/N]: ' permission == 1
+  prints 'Has parent permission [Y/N]: ' if selected == 1
   permission == gets.chomp if selected == 1
   permission == true if %w[y Y].include?(permission)
   permission == false if %n[n N].include?(permission)
