@@ -8,8 +8,7 @@ require './teachers'
 
 def list_of_books
   @books.each do |list|
-    puts "Title: \#"{list.title}", Author: #{list.author}"
-end
+    puts 'Title: \#{list.title}, Author: #{list.author}'
   main
 
 end
@@ -17,8 +16,6 @@ end
 def list_of_people
   @people.each do |list|
     puts "[#{list.class.name}], Name: #{list.name}, ID: #{list.id}, Age: #{list.age}"
-  
-end
   
   main
 end
