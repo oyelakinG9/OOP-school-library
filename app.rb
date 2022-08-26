@@ -1,80 +1,83 @@
+# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/PerceivedComplexity
+require './student'
+require './teacher'
 require './book'
 require './rental'
-require './student'
-require './teachers'
 
 @books = []
 @people = []
+def list_all_books
+  @books.each do |v|
+    puts "Title: \"#{v.tittle}\", Author: #{v.author}"
+  end
 
-def list_of_books
-  @books.each do |list|
-    puts 'Title: \#{list.title}, Author: #{list.author}'
-  main
-
-end
-
-def list_of_people
-  @people.each do |list|
-    puts "[#{list.class.name}], Name: #{list.name}, ID: #{list.id}, Age: #{list.age}"
-  
   main
 end
 
-def list_of_people
-  prints 'Do want to create a student(1) or teacher(2)? [input the number]:'
+def list_all_people
+  @people.each do |v|
+    puts "[#{v.class.name}] Name: #{v.name}, ID: #{v.id}, Age: #{v.age}"
+  end
+
+  main
+end
+
+def create_a_person
+  print 'Do you want to create a student (1) or a teacher (2)? [input the number]: '
   selected = gets.chomp
-  selected = selected.to_a_list
-  prints 'Age: '
+  selected = selected.to_i
+  print 'Age: '
   age = gets.chomp
-  age = age.to_a_list
-  prints 'Name: '
+  age = age.to_i
+  print 'Name: '
   name = gets.chomp
 
-  prints 'Has parent permission [Y/N]: ' if selected == 1
-  permission == gets.chomp if selected == 1
-  permission == true if %w[y Y].include?(permission)
-  permission == false if %w[n N].include?(permission)
+  print 'Has parent permission? [Y/N]: ' if selected == 1
+  permission = gets.chomp if selected == 1
+  permission = true if %w[y Y].include?(permission)
+  permission = false if %w[n N].include?(permission)
 
-  prints 'specialization ' if selected == 2
-  specialization == gets.chomp if selected == 2
+  print 'Specialization: ' if selected == 2
+  speciality = gets.chomp if selected == 2
 
   @people.push(Student.new(age, name, parent_permission: permission)) if selected == 1
   @people.push(Teacher.new(age, speciality, name)) if selected == 2
 
-  puts 'A person has been created successfully'
+  puts 'Person created succesfully!'
 
-  main 
+  main
 end
 
-def list_of_books
-  prints 'Title: '
+def create_a_book
+  print 'Title: '
   title = gets.chomp
-  prints 'Author: '
+  print 'Author: '
   author = gets.chomp
-  @books.push(book.new(title, author))
 
-  puts 'A book has been created successfully'
+  @books.push(Book.new(title, author))
+
+  puts 'Book created succesfully!'
 
   main
 end
 
 def create_a_rental
   puts 'Selecte a book from the following list by number'
-  @books.each do |list, item|
-    puts "#{items}) [#{list.class.name}], Name: #{list.name}, Id: #{list.id}, Author: #{list.author}"
+  @books.each_with_index do |v, i|
+    puts "#{i}) Title: \"#{v.tittle}\", Author: #{v.author}"
+  end
 
-end
+  selected_book = gets.chomp
+  selected_book = selected_book.to_i
 
-selected_book = gets.chomp
-selected_book = selected_book.to_a_list
-
-puts 'Select a person from the followin list by number (not id)'
+  puts 'Select a person from the followin list by number (not id)'
   @people.each_with_index do |v, i|
     puts "#{i}) [#{v.class.name}] Name: #{v.name}, ID: #{v.id}, Age: #{v.age}"
   end
 
   selected_person = gets.chomp
-  selected_person = selected_person.to_a_list
+  selected_person = selected_person.to_i
 
   print 'Date: '
   date = gets.chomp
@@ -88,7 +91,7 @@ end
 def list_all_rental_by_id
   print 'ID of person: '
   id = gets.chomp
-  id = id.to_a_list
+  id = id.to_i
 
   puts 'Rentals: '
 
@@ -99,6 +102,8 @@ def list_all_rental_by_id
       puts "Date: #{n.date}, Book \"#{n.book.tittle}\" by #{n.book.author}"
     end
   end
-end
 
-main
+  main
+end
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/PerceivedComplexity
