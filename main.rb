@@ -5,7 +5,7 @@ require './app'
 def main
   puts ''
   puts 'Please choose an option by enterin a number:'
-  options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental', 'List all rentals', 'Exit']
+  options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental', 'Exit']
   options.each_with_index { |v, k| puts "#{k + 1} - #{v}" }
 
   selected = gets.chomp
