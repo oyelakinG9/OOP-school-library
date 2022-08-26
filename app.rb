@@ -1,3 +1,6 @@
+# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/PerceivedComplexity
+
 require './book'
 require './rental'
 require './student'
@@ -102,3 +105,6 @@ def list_all_rental_by_id
 
   main
 end
+
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/PerceivedComplexity

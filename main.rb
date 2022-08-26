@@ -1,6 +1,9 @@
+# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/PerceivedComplexity
 require './app'
 
 def mains
+   # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
   puts ''
   puts 'Please choose an option by enterin a number:'
   options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental',
@@ -21,3 +24,6 @@ end
 puts 'Welcome to School Library App!'
 
 main
+
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/PerceivedComplexity
