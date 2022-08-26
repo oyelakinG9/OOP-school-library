@@ -99,6 +99,6 @@ def list_all_rental_by_id
       puts "Date: #{n.date}, Book \"#{n.book.tittle}\" by #{n.book.author}"
     end
   end
-
-  main
 end
+
+main
