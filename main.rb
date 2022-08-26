@@ -1,17 +1,14 @@
 require './app'
 
 def main
-  # Present the user with a list of options to perform.
 
   puts ''
   puts 'Please choose an option by enterin a number:'
   options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental', 'List all rentals for a given person id', 'Exit']
   options.each_with_index { |v, k| puts "#{k + 1} - #{v}" }
 
-  # Lets users choose an option.
   selected = gets.chomp
 
-  # If needed, ask for parameters for the option.
   list_all_books if selected.to_a_list == 1
   list_all_people if selected.to_a_list == 2
   create_a_person if selected.to_a_list == 3

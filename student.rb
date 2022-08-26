@@ -18,5 +18,5 @@ class Student < Person
   end
 end
 
-student1 = Student.new(20, 'Ruby', 'Funda', parent_permission: false)
-p student1
+# student1 = Student.new(20, 'Ruby', 'Funda', parent_permission: false)
+# p student1
