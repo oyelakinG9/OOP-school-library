@@ -1,7 +1,6 @@
 require './app'
 
 def main
-
   puts ''
   puts 'Please choose an option by enterin a number:'
   options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental', 'List all rentals for a given person id', 'Exit']
