@@ -33,7 +33,7 @@ def list_of_people
   prints 'Has parent permission [Y/N]: ' if selected == 1
   permission == gets.chomp if selected == 1
   permission == true if %w[y Y].include?(permission)
-  permission == false if %n[n N].include?(permission)
+  permission == false if %w[n N].include?(permission)
 
   prints 'specialization ' if selected == 2
   specialization == gets.chomp if selected == 2

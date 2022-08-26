@@ -22,4 +22,3 @@ def main
 end
 
 puts 'Welcome to School Library App!'
-main
