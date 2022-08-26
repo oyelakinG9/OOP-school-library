@@ -1,56 +1,35 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Project Name
-
-> Description the project.
+# OOP SCHOOL LIBRARY
+In this project, you will start building your school library app. In this initial step, you will implement the classes to represent students and teachers.
 
 
-## Built With
+If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
 
-- Major languages
-- Frameworks
-- Technologies used
+## Set-up linters in your local env
 
-## Live Demo (if available)
+### [RuboCop](https://docs.rubocop.org/en/stable/)
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+1. Add this line to the `Gemfile`
+    ```
+    gem 'rubocop', '>= 1.0', '< 2.0'
+    ```
+    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html).*
+2. Run `bundle install`.
+3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
+4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+5. Run `rubocop`.
+6. Fix linter errors.
+7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
 
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+**Oyelakin Ridwan Adio**
+- GitHub: [@oyelakin](https://github.com/oyelakinG9)
+- Twitter: [@oyelakin](https://twitter.com/OyelakinG1)
+- LinkedIn: [@oyelakin](https://www.linkedin.com/in/oyelakin-ridwan-4b4a02b6/)
 
 ## 🤝 Contributing
 
@@ -70,6 +49,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
