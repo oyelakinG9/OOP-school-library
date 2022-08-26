@@ -2,12 +2,10 @@
 # rubocop:disable Metrics/PerceivedComplexity
 require './app'
 
-def mains
-   # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
+def main
   puts ''
   puts 'Please choose an option by enterin a number:'
-  options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental',
-  'List all rentals for a given person id', 'Exit']
+  options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental', 'List all rentals for a given person id', 'Exit']
   options.each_with_index { |v, k| puts "#{k + 1} - #{v}" }
 
   selected = gets.chomp
