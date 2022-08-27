@@ -1,7 +1,7 @@
 # rubocop:disable Metrics/CyclomaticComplexity
 # rubocop:disable Metrics/PerceivedComplexity
 require './student'
-require './teacher'
+require './teachers'
 require './book'
 require './rental'
 
